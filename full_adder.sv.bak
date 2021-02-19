@@ -1,0 +1,5 @@
+module full_addr ( input a,b, cin
+						output s, cout);
+	assign s = a^b^cin;
+	assign cout = (x&y)|(x&cin)|(y&cin);
+endmodule
