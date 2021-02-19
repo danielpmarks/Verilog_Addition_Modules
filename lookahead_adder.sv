@@ -30,7 +30,7 @@ assign C0 = (cin);
 assign C4 = (cin & (P0)) | (G0);
 assign C8 = (cin & (P0) & (P1)) | ((G0) & (P1) | (G1);
 assign C12 = (cin & (P0) & (P1) & (P2)) | ((G0) & (P1) & (P2)) | ((G1) & (P2)) | (G2);
-assign cout = (C12 & P3) | (G3); 
+assign cout = (cin & (P0) & (P1) & (P2) & (P3)) | ((G0) & (P1) & (P2) & (P3)) | ((G1) & (P2) & (P3)) | (G2 & (P3)) | (G3); 
 
 // Carry outs aren't needed
 // These 4 CLAs make up the 4x4 lookahead adder
