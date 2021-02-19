@@ -28,7 +28,7 @@ assign G = G3 | (G2 & P3)|(G1 & P3 & P2)|(G0 & P3 & P2 & P1);
 // Assigning carry bits for the lookahead adders
 assign c0 = (cin);
 assign c1 = (cin & (P0)) | (G0);
-assign c2 = (cin & (P0) & (P1)) | ((G0) & (P1) | (G1);
+	assign c2 = (cin & (P0) & (P1)) | ((G0) & (P1)) | (G1);
 assign c3 = (cin & (P0) & (P1) & (P2)) | ((G0) & (P1) & (P2)) | ((G1) & (P2)) | (G2);
 
 // Carry outs aren't needed
